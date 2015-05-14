@@ -1,0 +1,27 @@
+/*TOP MENU*/
+.nav>li{
+    width: 100px;
+}
+.nav>li>a{
+    text-align: center;
+}
+#ecommerce-logo{
+    margin-top: 15px;
+    margin-right: 50px;
+}
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+    color:#F27C3B;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    color:#F27C3B;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color:#ffffff;
+}
+/*TOP MENU  - SUB MENU*/
+.dropdown-menu > li > a {
+    color:#ffffff;
+}
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+    color:#F27C3B;
+}

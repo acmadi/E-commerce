@@ -3,19 +3,35 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            {% stylesheets
+                'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'
+                '@FrontendBundle/Resources/public/css/all.css'
+            %}
+             <link href="{{ asset_url }}" type="text/css" rel="stylesheet">
+            {% endstylesheets %}
+
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12" style="background-color: #aaaaaa">
+        {% include "FrontendBundle::navigation.html.twig" %}
+        <div class="container">
+            <div class="row">
                 {% block body %}{% endblock %}
             </div>
         </div>
-    </div>
 
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            {#jquery have to be bfore bootstrap#}
+            {% javascripts
+
+                'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'
+                'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'
+            %}
+                 <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        {% endblock %}
     </body>
 </html>
