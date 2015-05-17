@@ -6,32 +6,35 @@
         <title>{% block title %}{% endblock %}</title>
         {% block stylesheets %}
             {% stylesheets
-                'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'
                 '@FrontendBundle/Resources/public/css/all.css'
             %}
-             <link href="{{ asset_url }}" type="text/css" rel="stylesheet">
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+            <link href="{{ asset_url }}" type="text/css" rel="stylesheet">
             {% endstylesheets %}
 
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body>
+    <body style="background-color: #e7e7e7;">
         {% include "FrontendBundle::navigation.html.twig" %}
-        <div class="container">
-            <div class="row">
-                {% block body %}{% endblock %}
+
+        <div class="container top60 bottom60">
+            <div class="row row-centered">
+                <div class="col-lg-12 col-md-12 col-centered" >
+                    {% block body %}{% endblock %}
+                </div>
             </div>
         </div>
-
+        <footer>
+        {% include "FrontendBundle::footer.html.twig" %}
+        </footer>
         {% block javascripts %}
             {#jquery have to be bfore bootstrap#}
-            {% javascripts
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
 
-                'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'
-                'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'
-            %}
-                 <script src="{{ asset_url }}"></script>
-            {% endjavascripts %}
         {% endblock %}
+        <script type="text/javascript" src="FrontendBundle/Resources/public/js/carouselAdditionalFunctions.js"></script>
     </body>
 </html>

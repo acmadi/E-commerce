@@ -43,9 +43,6 @@
 .top30 {
   margin-top: 30px;
 }
-.bottom60 {
-  margin-bottom: 60px;
-}
 /*ASIDE*/
 .list-group-item.active,
 .list-group-item.active:focus,
@@ -126,15 +123,6 @@ a.list-group-item {
   }
   .col-lg-3.col-sm-3.fixed-width2 {
     padding-left: 0px;
-  }
-}
-@media (max-width: 767px) {
-  .btn {
-    width: 100%;
-    margin-top: 10px;
-  }
-  .navbar-inverse .navbar-nav .open .dropdown-menu li a {
-    text-align: center;
   }
 }
 @media (min-width: 665px) and (max-width: 767px) {
@@ -326,9 +314,6 @@ a.list-group-item {
     height: 18px;
   }
 }
-.nav li {
-  width: inherit;
-}
 /*FOOTER*/
 .footer {
   position: fixed;
@@ -336,12 +321,4 @@ a.list-group-item {
   bottom: 0px;
   width: 100%;
   background-color: #222;
-}
-.footer a {
-  color: #F27C3B;
-  font-size: 10px;
-}
-.center-text {
-  text-align: center;
-  margin-top: 5px;
 }

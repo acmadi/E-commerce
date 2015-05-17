@@ -30,3 +30,39 @@
 .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
     color:#F27C3B;
 }
+/*MAIN PAGE*/
+.top60{
+    margin-top:60px;
+}
+.top30{
+    margin-top:30px;
+}
+/*ASIDE*/
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color:#222;
+    border-color: #222;
+    color:#F27C3B;
+}
+a.list-group-item {
+    color: #222;
+}
+/*CAROUSEL*/
+#bottom30{
+    margin-bottom: 30px !important;
+}
+.thumbnail {
+    width: 270px;
+    height: 170px;
+}
+.bg-shade{
+    background-color: #262d37;
+    opacity: 0.8;
+}
+.carousel-caption {
+    left: 7%;
+    width: 50%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    margin-bottom: 2%;
+}
+

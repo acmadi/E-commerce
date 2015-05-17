@@ -3,4 +3,45 @@
 {% block title %}E-commerce{% endblock %}
 
 {% block body %}
+
+    <header class="col-lg-12" xmlns="http://www.w3.org/1999/html">
+        <h3>Recommended:</h3>
+    </header>
+    <section class="col-lg-12">
+        {% include "FrontendBundle::carousel.html.twig" %}
+    </section>
+    <aside class=" col-lg-3 ">
+        <div class="list-group">
+            <a href="#" class="list-group-item active">
+                Categories
+            </a>
+            <a href="#" class="list-group-item">Cars,Motocycles &amp; Vehicles</a>
+            <a href="#" class="list-group-item">Vehicles Parts &amp; Accessories</a>
+            <a href="#" class="list-group-item">Camers &amp; Photography</a>
+            <a href="#" class="list-group-item">Computers, Tables &amp; Networking</a>
+            <a href="#" class="list-group-item">Sound &amp; Vision</a>
+            <a href="#" class="list-group-item">Clothes, Shoes &amp; Accesories</a>
+            <a href="#" class="list-group-item">Health &amp; Beauty</a>
+            <a href="#" class="list-group-item">Home &amp; Furnitury</a>
+            <a href="#" class="list-group-item">Toys &amp; Games</a>
+        </div>
+    </aside>
+    <section class="col-lg-9">
+        <div class="col-lg-7 col-md-7 col-sm-7 " >
+            <input type="search " class="form-control" placeholder="Search...">
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2">
+            <button class="btn col-lg-12 col-md-12col-sm-12" type="button"><span class="glyphicon glyphicon-search"></span><strong>&nbsp;Search</strong></button>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+
+            {% image '@FrontendBundle/Resources/public/images/logos/logo-basket.png' %}
+            <a href="#">
+            <img id="logo-basket" src="{{ asset_url }}" alt="logo-basket" />
+            </a>
+            <span class="text-muted">&nbsp;Your basket is empty</span>
+            {% endimage %}
+        </div>
+
+    </section>
 {% endblock %}
